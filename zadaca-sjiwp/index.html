@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //UNOS PODATAKA 
+let ime = prompt("Unesite ime:");
+let cijenaUlaznice =  prompt("Unesite cijenu ulaznice");
+let brojUlaznica = prompt("Unesite broj ulaznica");
+let budzet = prompt("Unesite budžet");
+//Proracuni i usporedbe
+let ukupnaCijena = cijenaUlaznice * brojUlaznica;
+let preostaliBudzet = budzet - ukupnaCijena;
+let budzetveciiljednak;
+if(budzet >= ukupnaCijena){
+    budzetveciiljednak = true;
+} else {
+    budzetveciiljednak = false; 
+}
+let budzettocnojednaktip;
+if(budzet === ukupnaCijena){
+    budzettocnojednaktip = true;
+} else {
+    budzettocnojednaktip = false; 
+}
+let text;
+if(confirm("Želite li nastaviti s planiranjem dragi korisniče;!?")===true){
+    text = "DA";
+} else {
+    text = "NE";
+}
+//Ispisic
+if (text === "DA"){alert("ime: " + ime +  "Ukupna cijena: " + ukupnaCijena +  "Preostali budžet: " + preostaliBudzet +  "Budžet veći ili jednak ukupnoj cijeni: " + budzetveciiljednak + "\n" + "Budžet točno jednak ukupnoj cijeni: " + budzettocnojednaktip + "odg iz confirma:" +text);}
+    </script>
+</body>
+</html>
